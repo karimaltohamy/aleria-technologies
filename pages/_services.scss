@@ -1,0 +1,189 @@
+$primary-color: #fa5b3d;
+$dark-color: #191919;
+$secound-dark: #181f44;
+
+// start who_we_are
+.who_we_are,
+.how_we_work {
+  padding: 40px 0;
+  color: $secound-dark;
+
+  .line {
+    display: flex;
+    gap: 40px;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+
+    .left {
+      .subtitle {
+        font-size: 19px;
+        color: $primary-color;
+        position: relative;
+        width: fit-content;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -60px;
+          height: 3px;
+          width: 50px;
+          background-color: #fa5b3d;
+        }
+      }
+
+      .title {
+        margin-top: 3px;
+        font-weight: 45px;
+        font-weight: 700;
+
+        span {
+          color: $primary-color;
+        }
+      }
+
+      .desc {
+        color: gray;
+        margin-bottom: 10px;
+      }
+
+      .features {
+        .feature {
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+
+          i {
+            color: $primary-color;
+          }
+
+          span {
+            font-size: 17px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .right {
+      .image {
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .who_we_are,
+  .how_we_work {
+    padding: 20px 0;
+
+    .line {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        .subtitle {
+          margin: auto;
+          font-size: 14px;
+        }
+
+        .title {
+          font-size: 19px;
+          margin-bottom: 3px;
+        }
+
+        .desc {
+          font-size: 13px;
+        }
+
+        .features {
+          .feature {
+            &:not(:last-child) {
+              margin-bottom: 8px;
+            }
+
+            i {
+              font-size: 14px;
+            }
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end who_we_are
+
+// start about_info_section
+.about_info_section {
+  padding: 40px 0;
+  color: white;
+
+  .boxs {
+    background-color: $secound-dark;
+    padding: 60px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    border-radius: 15px;
+
+    .box {
+      text-align: center;
+
+      svg {
+        width: 65px;
+      }
+
+      h4 {
+        font-size: 30px;
+        margin-top: 10px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about_info_section {
+    padding: 20px 0;
+
+    .boxs {
+      padding: 30px;
+      justify-content: center;
+      gap: 15px;
+
+      .box {
+        svg {
+          width: 45px;
+        }
+
+        h4 {
+          font-size: 18px;
+        }
+
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+// end about_info_section

@@ -1,0 +1,37 @@
+$primary-color: #fa5b3d;
+$dark-color: #191919;
+$secound-dark: #181f44;
+
+// start secound_hero
+.secound_hero {
+  height: 250px;
+  background-image: url("../images/img-inner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+  .container {
+    height: 100%;
+
+    .content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      h2 {
+        font-size: 40px;
+      }
+
+      p {
+        a {
+          &:last-child {
+            color: $primary-color !important;
+          }
+        }
+      }
+    }
+  }
+}
+// end secound_hero

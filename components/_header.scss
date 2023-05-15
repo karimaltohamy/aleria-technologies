@@ -87,3 +87,69 @@ header {
   }
 }
 // end header
+
+// start menu_mobile
+
+.overflow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.393);
+  z-index: 998;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.menu_mobile {
+  padding: 20px;
+  color: $dark-color;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  z-index: 999;
+  transition: all 0.4s;
+
+  &.active {
+    left: 0;
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    i {
+      font-size: 22px;
+      cursor: pointer;
+    }
+  }
+
+  .links {
+    a {
+      font-size: 20px;
+      font-weight: 500;
+      display: block;
+
+      margin-bottom: 15px;
+
+      &.active {
+        color: $primary-color !important;
+      }
+    }
+  }
+}
+// end menu_mobile

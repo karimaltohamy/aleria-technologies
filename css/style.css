@@ -1138,8 +1138,14 @@ footer .bottom_footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 20px;
+  padding: 5px 20px;
   position: relative;
+  background-color: #edebfd;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.aleria_application .boxs .lineBox .meta_inner .ap_img img {
+  height: 180px;
 }
 .aleria_application .boxs .lineBox .box_arrow {
   position: absolute;
@@ -1173,6 +1179,9 @@ footer .bottom_footer p {
   right: auto;
   left: -28px;
 }
+.aleria_application .boxs .lineBox:nth-child(2) .meta_inner .ap_img {
+  background-color: #fbe7f0;
+}
 .aleria_application .boxs .lineBox:nth-child(3) .meta_inner .ap_num {
   background-color: #843fac;
 }
@@ -1180,6 +1189,9 @@ footer .bottom_footer p {
   border-color: #ae56e1;
   top: auto;
   bottom: 44px;
+}
+.aleria_application .boxs .lineBox:nth-child(3) .meta_inner .ap_img {
+  background-color: #f4e9fc;
 }
 
 @media (max-width: 768px) {

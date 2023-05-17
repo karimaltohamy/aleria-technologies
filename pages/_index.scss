@@ -845,8 +845,15 @@ $secound-dark: #181f44;
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 40px 20px;
+          padding: 5px 20px;
           position: relative;
+          background-color: #edebfd;
+          border-top-right-radius: 30px;
+          border-bottom-right-radius: 30px;
+
+          img {
+            height: 180px;
+          }
         }
       }
 
@@ -880,6 +887,10 @@ $secound-dark: #181f44;
               left: -28px;
             }
           }
+
+          .ap_img {
+            background-color: #fbe7f0;
+          }
         }
       }
 
@@ -893,6 +904,10 @@ $secound-dark: #181f44;
               top: auto;
               bottom: 44px;
             }
+          }
+
+          .ap_img {
+            background-color: #f4e9fc;
           }
         }
       }

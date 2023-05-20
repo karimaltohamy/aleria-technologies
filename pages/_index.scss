@@ -180,7 +180,7 @@ $secound-dark: #181f44;
           text-align: center;
 
           .img_hero1 {
-                  animation: bns1 5s linear infinite;
+            animation: bns1 5s linear infinite;
             img {
               width: 80%;
             }
@@ -488,7 +488,7 @@ $secound-dark: #181f44;
 
   .services_bg {
     position: absolute;
-    top: 30px;
+    top: 85px;
     right: 0;
     z-index: -1;
     animation: move-top 3s ease infinite;

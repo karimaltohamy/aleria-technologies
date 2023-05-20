@@ -779,7 +779,7 @@ footer .bottom_footer p {
 }
 .our_services .services_bg {
   position: absolute;
-  top: 30px;
+  top: 85px;
   right: 0;
   z-index: -1;
   -webkit-animation: move-top 3s ease infinite;
@@ -3958,6 +3958,10 @@ footer .bottom_footer p {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {

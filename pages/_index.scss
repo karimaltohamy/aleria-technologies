@@ -7,7 +7,7 @@ $secound-dark: #181f44;
 .hero_section {
   height: calc(100vh - 72px);
   position: relative;
-  background-color: #191919 !important;
+  background-color: #0e1229 !important;
   color: white !important;
 
   .container {
@@ -32,7 +32,15 @@ $secound-dark: #181f44;
           transition: all 0.3s;
 
           span {
-            color: $primary-color;
+            background: linear-gradient(
+              90deg,
+              #501e9c 0%,
+              #8169f1 40%,
+              #fa5b3d 75%,
+              #ff847f 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
         }
 
@@ -60,26 +68,58 @@ $secound-dark: #181f44;
 
       .right {
         width: 50%;
+        position: relative;
 
-        mask-image: url(../images/hero-image-mask.png);
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-position: center center;
-        mask-position: center center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        height: 80%;
+        // mask-image: url(../images/hero-image-mask.png);
+        // mask-size: contain;
+        // mask-position: center center;
+        // mask-repeat: no-repeat;
+        // height: 80%;
 
         .img_hero1 {
           position: relative;
           z-index: 5;
           height: 100%;
+          animation: bns1 5s linear infinite;
 
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
+        }
+
+        .ball__element {
+          position: absolute;
+          top: 0;
+          right: 0;
+          animation: cir360 20s linear infinite;
+
+          img {
+            width: 85px;
+          }
+        }
+
+        .banner_blump {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          animation: cir360 20s linear infinite;
+
+          img {
+            width: 45px;
+          }
+        }
+
+        .banner_ball {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          animation: cir360 20s linear infinite;
+        }
+
+        img {
+          width: 55px;
         }
       }
     }
@@ -138,12 +178,179 @@ $secound-dark: #181f44;
 
         .right {
           text-align: center;
+
+          .img_hero1 {
+                  animation: bns1 5s linear infinite;
+            img {
+              width: 80%;
+            }
+          }
+
+          .ball__element {
+            img {
+              width: 45px;
+            }
+          }
+
+          .banner_ball,
+          .banner_blump {
+            img {
+              width: 30px;
+            }
+          }
         }
       }
     }
   }
 }
 // end hero section
+
+// start about_us_section
+.about_us_section {
+  padding: 60px 0;
+  color: $secound-dark;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    content: "";
+    background: #ed5050;
+    opacity: 0.5;
+    filter: blur(200px);
+  }
+
+  .line {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+
+    .left {
+      .title {
+        font-size: 37px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .question {
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .feature {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+
+        i {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .right {
+      text-align: center;
+      position: relative;
+
+      .image {
+        img {
+          width: 65%;
+        }
+      }
+
+      .brain_element {
+        position: absolute;
+        top: 50px;
+        left: -150px;
+
+        img {
+          width: 300px;
+        }
+      }
+
+      .img_ball {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: cir360 20s linear infinite;
+
+        img {
+          width: 55px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about_us_section {
+    padding: 30px 0;
+
+    .line {
+      flex-direction: column;
+      gap: 30px;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        text-align: center;
+
+        .title {
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+
+        .question {
+          font-size: 17px;
+        }
+
+        .feature {
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
+
+          i {
+            font-size: 14px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .right {
+        .brain_element {
+          left: -73px;
+
+          img {
+            width: 150px;
+          }
+        }
+
+        .img_ball {
+          img {
+            width: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+// end about_us_section
 
 // start our_services
 .our_services {
@@ -1631,6 +1838,20 @@ $secound-dark: #181f44;
 // end our_blog_section
 
 // animation
+@keyframes bns1 {
+  50% {
+    transform: rotate(-2deg);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes cir360 {
+  0% {
+    rotate: 360deg;
+  }
+}
 
 @keyframes move-top {
   0% {
